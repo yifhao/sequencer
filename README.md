@@ -20,3 +20,6 @@ mysql为单点
 32位ip,16位pid,16位类加载时的随机数,48位时间戳,16位序列号.  
 pid通过jmx获取, 无法获取的话, 使用随机数代替.  
 时间戳为毫秒,可以使用8925年.序列号使用AtomicInteger, 在类加载时随机赋初值.
+
+服务化框架－分布式Unique ID的生成方法一览  
+http://calvin1978.blogcn.com/articles/uuid.html
