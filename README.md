@@ -14,5 +14,9 @@ currentRange的号码使用完毕后, 切换nextRange到currentRange.
 
 mysql为单点
 
-##类似于MongoDB的UUID
-
+##MangGuoID
+实现类似于mongodb的ObjectID的uuid.  
+使用128位  
+32位ip,16位pid,16位类加载时的随机数,48位时间戳,16位序列号.  
+pid通过jmx获取, 无法获取的话, 使用随机数代替.  
+时间戳为毫秒,可以使用8925年.序列号使用AtomicInteger, 在类加载时随机赋初值.
