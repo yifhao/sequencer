@@ -11,13 +11,13 @@ import java.util.List;
 
 /**
  * Created by haoyifen on 2017/5/22 17:45.
- */
+ * 用于获取本机ip的类
+ * */
 public class Net {
     public static int stringIpToInt(String ip) {
         try {
             byte[] address = InetAddress.getByName(ip).getAddress();
-            int i = Ints.fromByteArray(address);
-            return i;
+            return Ints.fromByteArray(address);
         } catch (UnknownHostException e) {
             e.printStackTrace();
         }
@@ -26,7 +26,7 @@ public class Net {
 
     public static List<String> getLocalIP() {
         List<String> ipList = new ArrayList<>();
-        InetAddress ip = null;
+        InetAddress ip;
         try {
             Enumeration<NetworkInterface> netInterfaces = NetworkInterface.getNetworkInterfaces();
             while (netInterfaces.hasMoreElements()) {
