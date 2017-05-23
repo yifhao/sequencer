@@ -14,7 +14,7 @@ currentRange的号码使用完毕后, 切换nextRange到currentRange.
 
 mysql为单点
 
-##MangGuoID
+## MangGuoID
 实现类似于mongodb的ObjectID的uuid.  
 使用128位  
 32位ip,16位pid,16位类加载时的随机数,48位时间戳,16位序列号.  
